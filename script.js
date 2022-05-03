@@ -20,7 +20,7 @@ createDataSet(data, elements, container)
 updateHeight()
 
 speed.addEventListener('change', (e)=>{
-    if(e.target.value > 20 ) e.target.value = 20
+    if(e.target.value > 30 ) e.target.value = 30
     if(e.target.value < 1 ) e.target.value = 1
 })
 datasetInput.addEventListener("change", (e) => {
