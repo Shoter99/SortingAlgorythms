@@ -1,0 +1,36 @@
+body{
+    background-color: #333;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+h1{
+    color: #eee;
+}
+.menu{
+    margin: 1rem;
+}
+.container{
+    background-color: #eee;
+    display: flex;
+    flex-direction: row;
+    width: 100vmin;
+    height: 50vmin;
+    padding: 0 1rem;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+}
+.col{
+    background-color: hsl(200, 66%, 41%);
+    width: 1.5vmin;
+    margin: 0 .05rem;
+}
+.current{
+    background-color: hsl(0, 80%, 50%);
+}

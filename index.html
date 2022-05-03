@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" type="module"></script>
+</head>
+<body>
+    <h1>Algorithms visualization</h1> 
+    <div class="algo">
+        <label style="color:white" for="algorithms">Choose an algorithm: </label>
+        <input list="algorithms" name="algorithms" id="algo">
+        <datalist id="algorithms">
+            <option value="Bubble Sort" >
+            <option value="Insertion Sort">
+            <option value="Selection Sort">
+        </datalist>
+
+    </div>
+    <div class="menu">
+        <button class="shuffle">Shuffle</button>
+        <button class="start">Start</button>
+        <button class="stop">Stop</button>
+        <label style="color:white" for="speed">Speed: </label>
+        <input name='speed' type="number" id="speed" value="6" max="20" min="1" >
+        <label style="color:white" for="dataset">Dataset: </label>
+        <input name='dataset' type="number" id="dataset" value="60" max="150" min="10" >
+    </div>
+    <div class="container">
+    </div>
+</body>
+</html>
