@@ -9,7 +9,12 @@ console.log(datasetInput.value);
 let DATA_LENGTH = datasetInput.value
 let running = false
 const speed = document.querySelector('#speed')
-
+setBtnStatus()
+function setBtnStatus(){
+    startBtn.disabled = running
+    stopBtn.disabled = !running
+    shuffleBtn.disabled = running
+}
 for(let i = 0; i<DATA_LENGTH; i++) data.push(i+1)
 createDataSet(data, elements, container)
 updateHeight()
@@ -38,7 +43,8 @@ shuffleBtn.addEventListener("click", () => {
 startBtn.addEventListener("click", () => {
     
     running = true
-    let algoInput = document.querySelector("#algo").value || "Bubble Sort"
+    setBtnStatus()
+    let algoInput = document.querySelector("#algo").value || document.querySelector("#algo").placeholder
     let speed = document.querySelector('#speed').value
     speed = 100/speed
     switch(algoInput){
@@ -56,11 +62,12 @@ startBtn.addEventListener("click", () => {
             break
     }
     document.querySelector("#algo").value = ""
-    document.querySelector("#algo").placeholder = algoInput
+    document.querySelector("#algo").placeholder = algoInput || "Bubble Sort"
 
 })
 stopBtn.addEventListener("click", () => {
     running = false
+    setBtnStatus()
 })
 
 export function updateHeight(){
@@ -107,6 +114,8 @@ async function  bubbleSort(speed){
         }
         datasetlen--;
     }
+    running=false
+    setBtnStatus()
 
 }
 
@@ -127,6 +136,8 @@ async function insertionSort(speed){
             j--
         }
     }
+    running=false
+    setBtnStatus()
 }
 async function selectionSort(speed){
     let i,j,min
@@ -150,4 +161,6 @@ async function selectionSort(speed){
         }
         updateHeight()
     }
+    running=false
+    setBtnStatus()
 }
