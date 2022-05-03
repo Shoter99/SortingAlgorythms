@@ -55,8 +55,8 @@ startBtn.addEventListener("click", () => {
             bubbleSort(speed)
             break
     }
-    document.querySelector("#algo").placeholder = document.querySelector("#algo").value
     document.querySelector("#algo").value = ""
+    document.querySelector("#algo").placeholder = algoInput
 
 })
 stopBtn.addEventListener("click", () => {
